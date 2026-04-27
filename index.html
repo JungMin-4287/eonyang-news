@@ -1,0 +1,1179 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>언양문화소식지 — 2026년 4월 27일 제1호</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Noto+Serif+KR:wght@400;700&display=swap');
+
+/* ═══════════════════════════════════
+   RESET & ROOT
+═══════════════════════════════════ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { -webkit-text-size-adjust: 100%; }
+
+:root {
+  /* 브랜드 색상 */
+  --teal:      #0b7a70;   /* 메인 청록  */
+  --teal-dk:   #065c54;   /* 다크 청록  */
+  --teal-md:   #0d9688;   /* 미디엄 청록 */
+  --teal-lt:   #e4f4f2;   /* 라이트 청록 */
+  --coral:     #d44e16;   /* 메인 코랄  */
+  --coral-dk:  #a83c10;   /* 다크 코랄  */
+  --coral-lt:  #fef1eb;   /* 라이트 코랄 */
+  --blue:      #1e56a0;   /* 메인 블루  */
+  --blue-dk:   #163d78;   /* 다크 블루  */
+  --blue-lt:   #e8f0fb;   /* 라이트 블루 */
+  --green:     #1e6b30;   /* 메인 그린  */
+  --green-dk:  #144d22;   /* 다크 그린  */
+  --green-lt:  #e8f5ec;   /* 라이트 그린 */
+  --purple:    #5a2fa0;   /* 퍼플       */
+  --purple-lt: #f0eafb;   /* 라이트 퍼플 */
+
+  /* 그레이 스케일 */
+  --gray-50:  #f8f9fa;
+  --gray-100: #f0f1f3;
+  --gray-200: #e2e4e8;
+  --gray-300: #c8ccD2;
+  --gray-400: #8e96a2;
+  --gray-600: #4e5562;
+  --gray-700: #383e4a;
+  --gray-800: #22272e;
+  --white:    #ffffff;
+
+  /* 공통 */
+  --shadow-sm: 0 1px 4px rgba(0,0,0,.07);
+  --shadow:    0 3px 14px rgba(0,0,0,.09);
+  --shadow-lg: 0 8px 32px rgba(0,0,0,.13);
+  --radius:    10px;
+  --radius-sm: 6px;
+}
+
+body {
+  font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', '맑은 고딕', sans-serif;
+  background: var(--gray-100);
+  color: var(--gray-800);
+  font-size: 14px;
+  line-height: 1.7;
+}
+a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; }
+
+/* ═══════════════════════════════════
+   PAGE WRAPPER
+═══════════════════════════════════ */
+.page-bg {
+  min-height: 100vh;
+  background: var(--gray-100);
+  padding: 0;
+}
+.wrap {
+  max-width: 840px;
+  margin: 0 auto;
+  background: var(--white);
+  box-shadow: 0 0 40px rgba(0,0,0,.08);
+}
+
+/* ═══════════════════════════════════
+   TOP BAR
+═══════════════════════════════════ */
+.topbar {
+  background: var(--teal-dk);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 32px;
+  height: 38px;
+  gap: 12px;
+}
+.topbar-logo {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: #fff;
+  white-space: nowrap;
+}
+.topbar-links {
+  display: flex;
+  gap: 18px;
+  flex-wrap: nowrap;
+  overflow: hidden;
+}
+.topbar-links a {
+  font-size: 11px;
+  color: rgba(255,255,255,.75);
+  transition: color .15s;
+  white-space: nowrap;
+}
+.topbar-links a:hover { color: #fff; }
+
+/* ═══════════════════════════════════
+   HEADER
+═══════════════════════════════════ */
+.header {
+  background: var(--white);
+  border-bottom: 3px solid var(--teal);
+  padding: 18px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.header-brand { display: flex; align-items: center; gap: 14px; }
+.header-icon {
+  width: 50px; height: 50px;
+  border-radius: 12px;
+  background: var(--teal);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 24px;
+  flex-shrink: 0;
+}
+.header-text h1 {
+  font-family: 'Noto Serif KR', serif;
+  font-size: 21px;
+  font-weight: 700;
+  color: var(--teal-dk);
+  letter-spacing: -.3px;
+}
+.header-text p { font-size: 11px; color: var(--gray-400); margin-top: 2px; }
+.header-info { text-align: right; flex-shrink: 0; }
+.header-date { font-size: 13px; font-weight: 700; color: var(--gray-700); }
+.header-issue {
+  display: inline-block;
+  margin-top: 5px;
+  background: var(--teal);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 3px 10px;
+  border-radius: 20px;
+}
+
+/* ═══════════════════════════════════
+   HERO
+═══════════════════════════════════ */
+.hero {
+  position: relative;
+  height: 270px;
+  overflow: hidden;
+  background: var(--teal-dk);
+}
+.hero-img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center 40%;
+  opacity: .6;
+}
+.hero-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(
+    100deg,
+    rgba(6,92,84,.92) 0%,
+    rgba(6,92,84,.65) 55%,
+    rgba(6,92,84,.25) 100%
+  );
+}
+.hero-body {
+  position: absolute; inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 40px;
+}
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--coral);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  width: fit-content;
+}
+.hero-title {
+  font-family: 'Noto Serif KR', serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.35;
+  margin-bottom: 12px;
+  text-shadow: 0 1px 6px rgba(0,0,0,.3);
+}
+.hero-meta {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+.hero-meta span {
+  font-size: 12.5px;
+  color: rgba(255,255,255,.92);
+  text-shadow: 0 1px 4px rgba(0,0,0,.4);
+}
+
+/* ═══════════════════════════════════
+   TICKER
+═══════════════════════════════════ */
+.ticker {
+  background: var(--teal-lt);
+  border-bottom: 1px solid #b8ddd9;
+  padding: 10px 32px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 12.5px;
+  color: var(--teal-dk);
+  font-weight: 500;
+  flex-wrap: wrap;
+}
+.ticker-pill {
+  background: var(--teal);
+  color: #fff;
+  font-size: 9.5px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  padding: 3px 10px;
+  border-radius: 20px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* ═══════════════════════════════════
+   BADGE SYSTEM  (WCAG AA 검증)
+═══════════════════════════════════ */
+.b-coral   { background: var(--coral);   color: #fff; }
+.b-teal    { background: var(--teal);    color: #fff; }
+.b-blue    { background: var(--blue);    color: #fff; }
+.b-green   { background: var(--green);   color: #fff; }
+.b-purple  { background: var(--purple);  color: #fff; }
+.b-dark    { background: var(--gray-700);color: #fff; }
+
+.b-coral-o  { background: var(--coral-lt);  color: var(--coral-dk);  border: 1px solid #f0b898; }
+.b-teal-o   { background: var(--teal-lt);   color: var(--teal-dk);   border: 1px solid #9dcec8; }
+.b-blue-o   { background: var(--blue-lt);   color: var(--blue-dk);   border: 1px solid #a0bce8; }
+.b-green-o  { background: var(--green-lt);  color: var(--green-dk);  border: 1px solid #98c8a4; }
+.b-purple-o { background: var(--purple-lt); color: var(--purple);    border: 1px solid #c0a4e8; }
+
+/* ═══════════════════════════════════
+   SECTION COMMON
+═══════════════════════════════════ */
+.sec {
+  padding: 40px 32px 36px;
+  border-bottom: 1px solid var(--gray-200);
+}
+.sec:last-of-type { border-bottom: none; }
+
+.sec-head { margin-bottom: 22px; }
+.sec-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 4px;
+  gap: 8px;
+}
+.sec-kicker {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  color: var(--teal);
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.sec-kicker::before {
+  content: '';
+  display: inline-block;
+  width: 14px; height: 3px;
+  background: var(--teal);
+  border-radius: 2px;
+}
+.sec-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--gray-800);
+  letter-spacing: -.3px;
+  line-height: 1.3;
+}
+.sec-more {
+  font-size: 11.5px;
+  color: var(--teal);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.sec-more:hover { text-decoration: underline; }
+
+/* ═══════════════════════════════════
+   EVENT CARDS
+═══════════════════════════════════ */
+.ev-feat {
+  display: block;
+  border-radius: var(--radius);
+  overflow: hidden;
+  position: relative;
+  height: 220px;
+  margin-bottom: 16px;
+  box-shadow: var(--shadow);
+  transition: transform .2s, box-shadow .2s;
+}
+.ev-feat:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
+.ev-feat > img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform .4s;
+}
+.ev-feat:hover > img { transform: scale(1.04); }
+.ev-feat-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, transparent 15%, rgba(15,20,30,.9) 100%);
+}
+.ev-feat-body {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  padding: 20px 24px;
+}
+.ev-badge {
+  display: inline-block;
+  font-size: 9.5px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  padding: 3px 10px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.ev-feat-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.35;
+  margin-bottom: 8px;
+  text-shadow: 0 1px 6px rgba(0,0,0,.4);
+}
+.ev-feat-meta {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  font-size: 12px;
+  color: rgba(255,255,255,.9);
+  text-shadow: 0 1px 4px rgba(0,0,0,.4);
+}
+
+.ev-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+
+.ev-card {
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--gray-200);
+  background: var(--white);
+  display: flex; flex-direction: column;
+  box-shadow: var(--shadow-sm);
+  transition: transform .2s, box-shadow .2s;
+}
+.ev-card:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
+
+.ev-thumb {
+  position: relative;
+  height: 130px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.ev-thumb img { width: 100%; height: 100%; object-fit: cover; transition: transform .3s; }
+.ev-card:hover .ev-thumb img { transform: scale(1.06); }
+
+.ev-thumb-icon {
+  width: 100%; height: 100%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 44px;
+}
+
+.ev-type {
+  position: absolute; top: 10px; left: 10px;
+  font-size: 9.5px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  background: rgba(6,92,84,.88);
+  color: #fff;
+  backdrop-filter: blur(2px);
+}
+.ev-type.coral  { background: rgba(166,52,16,.88); }
+.ev-type.blue   { background: rgba(22,61,120,.88); }
+.ev-type.green  { background: rgba(20,77,34,.88);  }
+.ev-type.purple { background: rgba(74,35,140,.88); }
+
+.ev-body { padding: 16px; flex: 1; display: flex; flex-direction: column; }
+.ev-body h3 {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--gray-800);
+  margin-bottom: 8px;
+  line-height: 1.45;
+}
+.ev-info {
+  font-size: 12.5px;
+  color: var(--gray-600);
+  line-height: 1.85;
+  flex: 1;
+}
+.ev-info b { color: var(--gray-700); font-weight: 600; }
+.ev-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 12px;
+  align-self: flex-start;
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--teal-dk);
+  background: var(--teal-lt);
+  border: 1.5px solid #9dcec8;
+  padding: 6px 13px;
+  border-radius: var(--radius-sm);
+  transition: background .15s, color .15s;
+  min-height: 36px;
+}
+.ev-btn:hover { background: var(--teal); color: #fff; border-color: var(--teal); }
+.ev-btn::after { content: '→'; }
+
+/* ═══════════════════════════════════
+   HERITAGE CARDS
+═══════════════════════════════════ */
+.hc-list { display: flex; flex-direction: column; gap: 18px; }
+
+.hc {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--gray-200);
+  background: var(--white);
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow .2s;
+  text-decoration: none;
+}
+.hc:hover { box-shadow: var(--shadow); }
+.hc.rev { grid-template-columns: 1fr 240px; }
+.hc.rev .hc-img { order: 2; }
+.hc.rev .hc-body { order: 1; }
+
+.hc-img {
+  position: relative;
+  overflow: hidden;
+  min-height: 190px;
+  background: var(--gray-100);
+  flex-shrink: 0;
+}
+.hc-img img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .4s;
+}
+.hc:hover .hc-img img { transform: scale(1.04); }
+.hc-icon {
+  width: 100%; height: 100%; min-height: 190px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 60px;
+  background: linear-gradient(135deg, #ddf0ee, #c0e4e0);
+}
+
+.hc-grade {
+  position: absolute; bottom: 10px; left: 10px;
+  font-size: 9.5px; font-weight: 700;
+  background: rgba(6,92,84,.92);
+  color: #fff;
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+  letter-spacing: .5px;
+  backdrop-filter: blur(3px);
+}
+
+.hc-body {
+  padding: 22px 24px;
+  display: flex; flex-direction: column; justify-content: center;
+}
+.hc-num {
+  font-size: 34px; font-weight: 900;
+  color: var(--gray-200);
+  font-family: 'Noto Serif KR', serif;
+  line-height: 1; margin-bottom: 6px;
+}
+.hc-name {
+  font-size: 17px; font-weight: 700; color: var(--gray-800);
+  margin-bottom: 10px; line-height: 1.4;
+}
+.hc-desc { font-size: 13px; color: var(--gray-600); line-height: 1.85; }
+.hc-desc strong { color: var(--teal-dk); }
+.hc-link {
+  display: inline-flex; align-items: center; gap: 4px;
+  margin-top: 12px; font-size: 11.5px; font-weight: 700;
+  color: var(--teal-dk);
+  align-self: flex-start;
+  border-bottom: 1.5px solid transparent;
+  transition: border-color .15s;
+  min-height: 36px;
+}
+.hc-link:hover { border-color: var(--teal); }
+.hc-link::after { content: ' ↗'; font-size: 12px; }
+
+/* ═══════════════════════════════════
+   PERSON SPOTLIGHT
+═══════════════════════════════════ */
+.person-card {
+  border-radius: var(--radius);
+  overflow: hidden;
+  display: grid; grid-template-columns: 200px 1fr;
+  border: 1px solid var(--gray-200);
+  box-shadow: var(--shadow-sm);
+}
+.person-left {
+  background: linear-gradient(160deg, var(--teal-md) 0%, var(--teal-dk) 100%);
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  padding: 28px 20px; gap: 8px;
+}
+.person-emoji { font-size: 52px; }
+.person-name {
+  font-family: 'Noto Serif KR', serif;
+  font-size: 19px; font-weight: 700;
+  color: #fff;
+  text-align: center; line-height: 1.3;
+}
+.person-era {
+  font-size: 10.5px;
+  color: rgba(255,255,255,.82);
+  text-align: center; letter-spacing: .5px;
+}
+.person-right { padding: 26px 28px; background: var(--white); }
+.person-tags { display: flex; gap: 7px; flex-wrap: wrap; margin-bottom: 12px; }
+.p-tag {
+  font-size: 10.5px; font-weight: 700; letter-spacing: .5px;
+  padding: 3px 10px; border-radius: 20px;
+}
+.person-desc { font-size: 13px; color: var(--gray-600); line-height: 1.9; }
+.person-desc strong { color: var(--teal-dk); }
+.person-more {
+  display: inline-flex; align-items: center; gap: 4px;
+  margin-top: 14px; font-size: 12px; font-weight: 700;
+  color: var(--teal-dk);
+  border-bottom: 1.5px solid transparent;
+  transition: border-color .15s;
+  min-height: 36px;
+}
+.person-more:hover { border-color: var(--teal); }
+
+/* ═══════════════════════════════════
+   NOTICE BOXES
+═══════════════════════════════════ */
+.notice {
+  border-radius: var(--radius-sm);
+  padding: 14px 18px;
+  font-size: 13px; line-height: 1.8;
+  margin-top: 18px;
+}
+.notice-coral {
+  background: var(--coral-lt);
+  border-left: 4px solid var(--coral);
+  color: #4a1e08;
+}
+.notice-coral b { color: var(--coral-dk); }
+.notice-teal {
+  background: var(--teal-lt);
+  border-left: 4px solid var(--teal);
+  color: #08302c;
+}
+.notice-teal b { color: var(--teal-dk); }
+
+/* ═══════════════════════════════════
+   ORG CARDS
+═══════════════════════════════════ */
+.org-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.org-card {
+  border-radius: var(--radius);
+  border: 1px solid var(--gray-200);
+  background: var(--white);
+  padding: 20px;
+  box-shadow: var(--shadow-sm);
+  transition: transform .2s, box-shadow .2s;
+  display: flex; flex-direction: column;
+}
+.org-card:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
+.org-head { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
+.org-icon {
+  width: 42px; height: 42px;
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 19px; flex-shrink: 0;
+}
+.oi-teal   { background: var(--teal-lt); }
+.oi-coral  { background: var(--coral-lt); }
+.oi-blue   { background: var(--blue-lt); }
+.oi-green  { background: var(--green-lt); }
+.org-name { font-size: 14px; font-weight: 700; color: var(--gray-800); }
+.org-type {
+  font-size: 10px; font-weight: 600; letter-spacing: .5px;
+  color: var(--gray-400);
+}
+.org-desc { font-size: 12.5px; color: var(--gray-600); line-height: 1.8; flex: 1; }
+.org-link {
+  display: inline-flex; align-items: center; gap: 4px;
+  margin-top: 10px; font-size: 11.5px; font-weight: 700;
+  color: var(--teal-dk);
+  align-self: flex-start;
+  border-bottom: 1.5px solid transparent;
+  transition: border-color .15s;
+  min-height: 36px;
+}
+.org-link:hover { border-color: var(--teal); }
+.org-link::after { content: ' ↗'; }
+
+/* ═══════════════════════════════════
+   NEWS LIST
+═══════════════════════════════════ */
+.news-list { list-style: none; }
+.ni {
+  display: grid; grid-template-columns: auto 1fr;
+  gap: 0 15px; align-items: start;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--gray-200);
+}
+.ni:first-child { padding-top: 0; }
+.ni:last-child { border-bottom: none; padding-bottom: 0; }
+.ni-cat {
+  font-size: 9.5px; font-weight: 800; letter-spacing: 1px;
+  padding: 4px 10px; border-radius: 20px; text-transform: uppercase;
+  white-space: nowrap; margin-top: 4px;
+}
+.ni h4 { font-size: 15px; font-weight: 700; color: var(--gray-800); margin-bottom: 5px; }
+.ni p { font-size: 13px; color: var(--gray-600); line-height: 1.8; }
+.ni-link {
+  display: inline-flex; align-items: center; gap: 4px;
+  margin-top: 8px; font-size: 11.5px; font-weight: 700;
+  color: var(--teal-dk);
+  border-bottom: 1.5px solid transparent;
+  transition: border-color .15s;
+  min-height: 36px;
+}
+.ni-link:hover { border-color: var(--teal); }
+.ni-link::after { content: ' →'; }
+
+/* ═══════════════════════════════════
+   QUICK LINKS BOARD
+═══════════════════════════════════ */
+.board {
+  background: var(--gray-50);
+  border-top: 1px solid var(--gray-200);
+  padding: 36px 32px;
+}
+.board-title { font-size: 15px; font-weight: 700; color: var(--gray-800); margin-bottom: 16px; }
+.board-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 12px; }
+.bc {
+  border-radius: var(--radius);
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  padding: 16px;
+  box-shadow: var(--shadow-sm);
+  transition: transform .2s, box-shadow .2s;
+  display: flex; flex-direction: column;
+}
+.bc:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
+.bc-icon { font-size: 22px; margin-bottom: 8px; }
+.bc strong { font-size: 13px; font-weight: 700; color: var(--gray-800); display: block; margin-bottom: 4px; }
+.bc p { font-size: 12px; color: var(--gray-600); line-height: 1.7; flex: 1; }
+.bc-link {
+  font-size: 11.5px; font-weight: 700; color: var(--teal-dk);
+  margin-top: 8px; display: inline-block;
+}
+.bc-link:hover { text-decoration: underline; }
+
+/* ═══════════════════════════════════
+   FOOTER
+═══════════════════════════════════ */
+.footer {
+  background: var(--gray-800);
+  padding: 28px 32px;
+}
+.footer-top {
+  display: flex; justify-content: space-between; align-items: center; gap: 16px;
+  padding-bottom: 16px; border-bottom: 1px solid rgba(255,255,255,.1);
+  margin-bottom: 16px; flex-wrap: wrap;
+}
+.footer-brand {
+  font-family: 'Noto Serif KR', serif;
+  font-size: 17px; font-weight: 700; color: #fff;
+}
+.footer-brand span { color: var(--teal-md); }
+.footer-links { display: flex; gap: 16px; flex-wrap: wrap; }
+.footer-links a {
+  font-size: 11.5px;
+  color: rgba(255,255,255,.6);
+  transition: color .15s;
+  min-height: 36px; display: flex; align-items: center;
+}
+.footer-links a:hover { color: rgba(255,255,255,.95); }
+.footer-copy {
+  font-size: 11.5px;
+  color: rgba(255,255,255,.48);
+  line-height: 1.9;
+  text-align: center;
+}
+
+/* ═══════════════════════════════════
+   RESPONSIVE — TABLET 640px
+═══════════════════════════════════ */
+@media (max-width: 640px) {
+  .topbar-links { display: none; }
+  .topbar { justify-content: center; }
+
+  .header { flex-direction: column; align-items: flex-start; gap: 10px; padding: 16px 20px; }
+  .header-info { text-align: left; }
+
+  .hero { height: 200px; }
+  .hero-body { padding: 0 20px; }
+  .hero-title { font-size: 20px; }
+  .hero-meta { gap: 10px; }
+  .hero-meta span { font-size: 11.5px; }
+
+  .ticker { padding: 9px 20px; font-size: 11.5px; }
+
+  .sec { padding: 30px 20px 26px; }
+  .sec-title { font-size: 18px; }
+
+  .ev-grid { grid-template-columns: 1fr; }
+  .ev-feat { height: 180px; }
+  .ev-feat-title { font-size: 16px; }
+
+  .hc, .hc.rev {
+    grid-template-columns: 1fr;
+    grid-template-rows: 180px auto;
+  }
+  .hc.rev .hc-img, .hc .hc-img { order: 0; }
+  .hc.rev .hc-body, .hc .hc-body { order: 0; }
+  .hc-img { min-height: 180px; }
+  .hc-icon { min-height: 180px; }
+
+  .person-card { grid-template-columns: 1fr; }
+  .person-left { flex-direction: row; gap: 16px; padding: 20px; }
+  .person-emoji { font-size: 40px; }
+  .person-right { padding: 20px; }
+
+  .org-grid { grid-template-columns: 1fr; }
+
+  .board-grid { grid-template-columns: 1fr 1fr; }
+  .board { padding: 28px 20px; }
+
+  .footer { padding: 24px 20px; }
+  .footer-top { flex-direction: column; align-items: flex-start; }
+}
+
+/* ═══════════════════════════════════
+   RESPONSIVE — MOBILE 400px
+═══════════════════════════════════ */
+@media (max-width: 400px) {
+  .board-grid { grid-template-columns: 1fr; }
+  .hero { height: 170px; }
+  .hero-title { font-size: 17px; }
+  .header-text h1 { font-size: 18px; }
+  .ev-feat { height: 160px; }
+  .ev-feat-meta { display: none; }
+}
+
+/* ═══════════════════════════════════
+   PC 1200px+ 여백 처리
+═══════════════════════════════════ */
+@media (min-width: 841px) {
+  .page-bg { padding: 24px 0 40px; }
+  .wrap { border-radius: 12px; overflow: hidden; }
+}
+</style>
+</head>
+<body>
+<div class="page-bg">
+<div class="wrap">
+
+<!-- ── TOP BAR ── -->
+<div class="topbar">
+  <span class="topbar-logo">🏛 언양문화소식지</span>
+  <div class="topbar-links">
+    <a href="https://www.ucf.or.kr:478/" target="_blank" rel="noopener">울주문화재단</a>
+    <a href="https://www.uljusiseol.or.kr" target="_blank" rel="noopener">울주군시설관리공단</a>
+    <a href="https://ulsan.grandculture.net" target="_blank" rel="noopener">울산역사문화대전</a>
+    <a href="https://heritage.go.kr" target="_blank" rel="noopener">국가유산포털</a>
+  </div>
+</div>
+
+<!-- ── HEADER ── -->
+<header class="header">
+  <div class="header-brand">
+    <div class="header-icon">🎭</div>
+    <div class="header-text">
+      <h1>언양 문화소식지</h1>
+      <p>체육 · 문화 · 예술 · 역사 — 울산광역시 울주군 언양읍</p>
+    </div>
+  </div>
+  <div class="header-info">
+    <div class="header-date">2026년 4월 27일 (월)</div>
+    <span class="header-issue">창간 제1호</span>
+  </div>
+</header>
+
+<!-- ── HERO ── -->
+<div class="hero">
+  <img class="hero-img" src="https://upload.wikimedia.org/wikipedia/commons/5/53/View_of_downtown_Eonyang.jpg" alt="언양 도심 전경">
+  <div class="hero-overlay"></div>
+  <div class="hero-body">
+    <span class="hero-badge">⭐ 이번 주 주목</span>
+    <div class="hero-title">2026 울주 공공미술 프로젝트<br>「야화(夜畵)」 개막</div>
+    <div class="hero-meta">
+      <span>📅 4월 25일 ~ 5월 10일</span>
+      <span>📍 외고산 옹기마을 일대</span>
+      <span>🎨 무료 관람</span>
+    </div>
+  </div>
+</div>
+
+<!-- ── TICKER ── -->
+<div class="ticker">
+  <span class="ticker-pill">NOW</span>
+  울주 공공미술 야화展(4/25~5/10) &nbsp;·&nbsp; 어린이날 주민자치 공연(5/5) &nbsp;·&nbsp; 반구대 유네스코 1주년 기념 행사 예고(7월)
+</div>
+
+<!-- ════ 섹션 1: 이번 주 행사 ════ -->
+<section class="sec">
+  <div class="sec-head">
+    <div class="sec-row">
+      <div class="sec-kicker">이번 주 행사</div>
+      <a class="sec-more" href="https://korean.visitkorea.or.kr/kfes/list/festivalCalendar.do" target="_blank" rel="noopener">전체 보기 →</a>
+    </div>
+    <h2 class="sec-title">4월 27일 ~ 5월 5일 행사 캘린더</h2>
+  </div>
+
+  <!-- Featured -->
+  <a class="ev-feat" href="https://www.iusm.co.kr/news/articleView.html?idxno=1062079" target="_blank" rel="noopener">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a3/Eonyang_Dolmen_Sign.jpg" alt="울주 공공미술 야화">
+    <div class="ev-feat-overlay"></div>
+    <div class="ev-feat-body">
+      <span class="ev-badge b-coral">⭐ 이번 주 주목 행사</span>
+      <div class="ev-feat-title">2026 울주 공공미술 프로젝트 「야화(夜畵)」</div>
+      <div class="ev-feat-meta">
+        <span>📅 4월 25일(금) ~ 5월 10일(일)</span>
+        <span>📍 외고산 옹기마을 일대</span>
+        <span>🎨 야간 공공미술 · 무료</span>
+      </div>
+    </div>
+  </a>
+
+  <!-- 4 cards -->
+  <div class="ev-grid">
+
+    <a class="ev-card" href="https://www.onggi.or.kr/" target="_blank" rel="noopener">
+      <div class="ev-thumb">
+        <div class="ev-thumb-icon" style="background:linear-gradient(135deg,#fde8d4,#f5c0a0)">🏺</div>
+        <span class="ev-type coral">전시·체험</span>
+      </div>
+      <div class="ev-body">
+        <h3>옹기思索 전시 &amp; 폐공장 투어</h3>
+        <div class="ev-info">
+          <b>📅</b> 5월 3일(토) ~ 5월 5일(월)<br>
+          <b>📍</b> 외고산 옹기마을 전시관·폐공장<br>
+          옹기 역사·미학 기획전 + 폐공장 내부 탐방. 어린이 체험 병행!
+        </div>
+        <span class="ev-btn">울산옹기축제 공식 사이트</span>
+      </div>
+    </a>
+
+    <a class="ev-card" href="https://ticket.ulju.ulsan.kr/rsvc/rsv_pm_detail.html?pfmIng=1&p_idx=132" target="_blank" rel="noopener">
+      <div class="ev-thumb">
+        <div class="ev-thumb-icon" style="background:linear-gradient(135deg,#e8f0fb,#c0d0f4)">🎭</div>
+        <span class="ev-type blue">공연</span>
+      </div>
+      <div class="ev-body">
+        <h3>울주군 주민자치단 어린이날 공연</h3>
+        <div class="ev-info">
+          <b>📅</b> 5월 5일(월) 어린이날<br>
+          <b>📍</b> 울주 복합웰컴센터<br>
+          주민이 직접 만드는 자치 공연. 전 연령 무료!
+        </div>
+        <span class="ev-btn">공연 예약 바로가기</span>
+      </div>
+    </a>
+
+    <a class="ev-card" href="https://www.ucf.or.kr/uljuart/index.html" target="_blank" rel="noopener">
+      <div class="ev-thumb">
+        <div class="ev-thumb-icon" style="background:linear-gradient(135deg,#e8f5ec,#b8e0c0)">🖼</div>
+        <span class="ev-type green">전시</span>
+      </div>
+      <div class="ev-body">
+        <h3>「그림으로 안아준 얼굴들」 서은혜 展</h3>
+        <div class="ev-info">
+          <b>📅</b> ~5월 27일(수) 진행 중<br>
+          <b>📍</b> 울산시학생교육문화회관<br>
+          관계의 선을 잇는 인물화 기획전. 무료 관람.
+        </div>
+        <span class="ev-btn">울주문화예술회관</span>
+      </div>
+    </a>
+
+    <a class="ev-card" href="https://www.ulsan.go.kr/s/bangucheonpetroglyphs/main.ulsan" target="_blank" rel="noopener">
+      <div class="ev-thumb">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Bangudae3.jpg/600px-Bangudae3.jpg" alt="반구대 암각화" loading="lazy">
+        <span class="ev-type">역사 탐방</span>
+      </div>
+      <div class="ev-body">
+        <h3>반구대 암각화 — 유네스코 세계유산</h3>
+        <div class="ev-info">
+          <b>📅</b> 연중 개방<br>
+          <b>📍</b> 언양읍 반구대안길 254<br>
+          7,000년 전 선사인의 기록. 세계가 인정한 언양의 자랑.
+        </div>
+        <span class="ev-btn">탐방 예약·안내</span>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+<!-- ════ 섹션 2: 문화유산 ════ -->
+<section class="sec">
+  <div class="sec-head">
+    <div class="sec-row">
+      <div class="sec-kicker">문화유산 이야기</div>
+      <a class="sec-more" href="https://heritage.go.kr" target="_blank" rel="noopener">국가유산포털 →</a>
+    </div>
+    <h2 class="sec-title">이달의 문화재 3선</h2>
+  </div>
+  <div class="hc-list">
+
+    <a class="hc" href="https://heritage.go.kr/heri/cul/culSelectDetail.do?ccbaCpno=1112602850000" target="_blank" rel="noopener">
+      <div class="hc-img">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/%EC%9A%B8%EC%A3%BC_%EB%8C%80%EA%B3%A1%EB%A6%AC_%EB%B0%98%EA%B5%AC%EB%8C%80_%EC%95%94%EA%B0%81%ED%99%94.jpg/960px-%EC%9A%B8%EC%A3%BC_%EB%8C%80%EA%B3%A1%EB%A6%AC_%EB%B0%98%EA%B5%AC%EB%8C%80_%EC%95%94%EA%B0%81%ED%99%94.jpg" alt="반구대 암각화" loading="lazy">
+        <span class="hc-grade">🌍 유네스코 세계유산 · 국보 285호</span>
+      </div>
+      <div class="hc-body">
+        <div class="hc-num">01</div>
+        <div class="hc-name">울주 대곡리 반구대 암각화</div>
+        <div class="hc-desc">태화강 상류 대곡천 절벽에 새겨진 300여 점의 선사시대 그림. 지구상 가장 오래된 <strong>고래사냥 그림(약 7,000년 전)</strong>이 포함되어 있으며 2025년 7월 유네스코 세계유산에 등재됐습니다.</div>
+        <span class="hc-link">국가유산포털에서 자세히 보기</span>
+      </div>
+    </a>
+
+    <a class="hc rev" href="https://heritage.go.kr/heri/cul/culSelectDetail.do?ccbaCpno=1121501530000" target="_blank" rel="noopener">
+      <div class="hc-img">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/%EC%96%B8%EC%96%91%EC%9D%8D%EC%84%B1_%EB%82%A8%EB%AC%B8_%EC%98%81%ED%99%94%EB%A3%A8_01.JPG/960px-%EC%96%B8%EC%96%91%EC%9D%8D%EC%84%B1_%EB%82%A8%EB%AC%B8_%EC%98%81%ED%99%94%EB%A3%A8_01.JPG" alt="언양읍성 남문 영화루" loading="lazy">
+        <span class="hc-grade">📜 사적 제153호</span>
+      </div>
+      <div class="hc-body">
+        <div class="hc-num">02</div>
+        <div class="hc-name">울주 언양읍성</div>
+        <div class="hc-desc">1500년(연산군 6) 축조된 조선시대 평지 읍성. 4대문·12치성·해자를 갖춘 교과서 같은 구조. 성벽 외곽 <strong>김취려 장군 벽화길</strong>과 카페 골목이 인기 산책 코스입니다.</div>
+        <span class="hc-link">국가유산포털에서 자세히 보기</span>
+      </div>
+    </a>
+
+    <a class="hc" href="https://ulsan.grandculture.net" target="_blank" rel="noopener">
+      <div class="hc-img">
+        <div class="hc-icon">⛪</div>
+        <span class="hc-grade">🏛 등록문화재 · 울산 최초 성당</span>
+      </div>
+      <div class="hc-body">
+        <div class="hc-num">03</div>
+        <div class="hc-name">언양성당</div>
+        <div class="hc-desc">1800년대 천주교 박해를 피해 언양으로 온 신앙인들의 공동체에서 시작. 울산 지역 <strong>최초의 천주교 성당</strong>으로, 고요한 분위기가 역사 탐방 코스로 사랑받고 있습니다.</div>
+        <span class="hc-link">울산역사문화대전에서 자세히 보기</span>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+<!-- ════ 섹션 3: 역사 인물 ════ -->
+<section class="sec">
+  <div class="sec-head">
+    <div class="sec-kicker">역사 인물 스포트라이트</div>
+    <h2 class="sec-title">이달의 인물</h2>
+  </div>
+  <div class="person-card">
+    <div class="person-left">
+      <div class="person-emoji">⚔️</div>
+      <div class="person-name">김취려<br><small style="font-size:13px;opacity:.8">金就礪</small></div>
+      <div class="person-era">고려 후기 무신 · 명장</div>
+    </div>
+    <div class="person-right">
+      <div class="person-tags">
+        <span class="p-tag b-teal-o">고려 무신</span>
+        <span class="p-tag b-green-o">언양 연고</span>
+        <span class="p-tag b-blue-o">항몽 명장</span>
+      </div>
+      <div class="person-desc">
+        고려 후기를 대표하는 무신으로 거란·몽골 침입으로부터 나라를 지킨 명장입니다. 언양읍성 성벽 외곽에는 <strong>장군의 일대기를 담은 벽화길(약 600m)</strong>이 조성되어 있습니다. 언양읍성 동문에서 출발하는 벽화길 산책으로 살아있는 역사를 만나보세요.
+      </div>
+      <a class="person-more" href="https://encykorea.aks.ac.kr/Article/E0036174" target="_blank" rel="noopener">언양읍성·김취려 더 알아보기 →</a>
+    </div>
+  </div>
+  <div class="notice notice-coral">
+    💡 <b>언양의 3·1 운동</b> — 언양읍은 삼한시대부터 이어오는 긴 역사를 자랑하며 <b>3·1 독립운동의 본거지</b>로 '애국·충절의 고향'으로 불립니다. 1919년 3월 언양 장날 수백 명의 주민이 독립만세를 외쳤던 그 정신이 오늘날 언양 곳곳에 살아 숨쉬고 있습니다.
+  </div>
+</section>
+
+<!-- ════ 섹션 4: 단체·동호회 ════ -->
+<section class="sec">
+  <div class="sec-head">
+    <div class="sec-kicker">단체 · 동호회</div>
+    <h2 class="sec-title">우리 지역 문화·체육 단체</h2>
+  </div>
+  <div class="org-grid">
+    <a class="org-card" href="https://www.ucf.or.kr:478/" target="_blank" rel="noopener">
+      <div class="org-head">
+        <div class="org-icon oi-teal">🎭</div>
+        <div><div class="org-name">울주문화재단</div><div class="org-type">문화예술 공공기관</div></div>
+      </div>
+      <div class="org-desc">울주문화예술회관·오영수 문학관·생활문화센터 운영. 연간 수십 편의 공연·전시·강좌 진행.</div>
+      <span class="org-link">공식 사이트</span>
+    </a>
+    <a class="org-card" href="https://www.ucf.or.kr/uljuart/index.html" target="_blank" rel="noopener">
+      <div class="org-head">
+        <div class="org-icon oi-coral">🎪</div>
+        <div><div class="org-name">울주문화예술회관</div><div class="org-type">공연 · 전시</div></div>
+      </div>
+      <div class="org-desc">287석 프로시니엄 극장 + 전시실·다목적실. 공연 예매·강좌 신청 모두 가능. ☎ 052-263-0811</div>
+      <span class="org-link">예매·강좌 신청</span>
+    </a>
+    <a class="org-card" href="https://www.uljusiseol.or.kr/uljusports/" target="_blank" rel="noopener">
+      <div class="org-head">
+        <div class="org-icon oi-blue">🏃</div>
+        <div><div class="org-name">울주군국민체육센터</div><div class="org-type">체육 · 스포츠</div></div>
+      </div>
+      <div class="org-desc">수영·헬스·에어로빅·구기 강좌 운영. 지역 주민 할인 혜택 적용.</div>
+      <span class="org-link">강좌 신청</span>
+    </a>
+    <a class="org-card" href="https://www.ucf.or.kr" target="_blank" rel="noopener">
+      <div class="org-head">
+        <div class="org-icon oi-green">📚</div>
+        <div><div class="org-name">오영수 문학관</div><div class="org-type">문학 · 역사</div></div>
+      </div>
+      <div class="org-desc">언양 출신 소설가 오영수(1909~1979) 기념관. 「갯마을」 육필 원고·유품 전시.</div>
+      <span class="org-link">울주문화재단 안내</span>
+    </a>
+  </div>
+  <div class="notice notice-teal" style="margin-top:16px">
+    📣 <b>동호회·소모임 무료 홍보!</b> 언양 소식지에 여러분의 단체를 소개해 드립니다. 독서·그림·축구·등산·합창 등 장르 불문. 다음 호 게재를 원하시면 편집팀으로 연락 주세요.
+  </div>
+</section>
+
+<!-- ════ 섹션 5: 체육·예술 소식 ════ -->
+<section class="sec">
+  <div class="sec-head">
+    <div class="sec-kicker">체육 · 예술 소식</div>
+    <h2 class="sec-title">이번 주 뉴스</h2>
+  </div>
+  <ul class="news-list">
+    <li class="ni">
+      <span class="ni-cat b-blue-o">체육</span>
+      <div>
+        <h4>울주군 생활체육대회 봄 시즌 개막</h4>
+        <p>배드민턴·족구·탁구 등 종목별 동호인 대회가 5월부터 순차 진행됩니다. 참가 신청은 울주군시설관리공단에서.</p>
+        <a class="ni-link" href="https://www.uljusiseol.or.kr/portal/facility/facilityTab1.do?classId=SPORTS&itemId=T0000012" target="_blank" rel="noopener">참가 신청 바로가기</a>
+      </div>
+    </li>
+    <li class="ni">
+      <span class="ni-cat b-green-o">예술</span>
+      <div>
+        <h4>울주생활문화센터 5월 봄 강좌 모집</h4>
+        <p>수채화·캘리그래피·도예·민요 등 강좌를 5월부터 시작합니다. 언양·울주 주민 누구나 저렴하게 수강 가능!</p>
+        <a class="ni-link" href="https://www.ucf.or.kr:478/" target="_blank" rel="noopener">강좌 신청 바로가기</a>
+      </div>
+    </li>
+    <li class="ni">
+      <span class="ni-cat b-blue-o">체육</span>
+      <div>
+        <h4>언양읍성 둘레 걷기 — 봄 나들이 코스</h4>
+        <p>성벽 둘레길(1.2km) → 벽화길 → 카페 골목. 매주 토요일 오전 8시 동문 앞 자율 걷기 모임!</p>
+        <a class="ni-link" href="https://www.wellargehello.com/community/hometownNews/6e38b080-5afb-47a2-91b3-edb07a3bfef0" target="_blank" rel="noopener">언양읍성 탐방 안내</a>
+      </div>
+    </li>
+    <li class="ni">
+      <span class="ni-cat b-coral-o">예술</span>
+      <div>
+        <h4>반구대 유네스코 1주년 기념 행사 예고 — 2026년 7월</h4>
+        <p>등재 1주년 기념 사진전·강연·특별 탐방 프로그램이 7월 예정. 많은 관심 부탁드립니다.</p>
+        <a class="ni-link" href="https://www.ulsan.go.kr/s/bangucheonpetroglyphs/main.ulsan" target="_blank" rel="noopener">반구천 암각화 공식 사이트</a>
+      </div>
+    </li>
+  </ul>
+</section>
+
+<!-- ════ 퀵링크 알림판 ════ -->
+<div class="board">
+  <div class="board-title">📋 빠른 링크 — 자주 찾는 정보</div>
+  <div class="board-grid">
+    <a class="bc" href="https://www.ulsan.go.kr/s/bangucheonpetroglyphs/main.ulsan" target="_blank" rel="noopener">
+      <div class="bc-icon">🌍</div>
+      <strong>반구대 암각화 탐방</strong>
+      <p>언양읍 반구대안길 254. 방문자센터 해설 신청 가능.</p>
+      <span class="bc-link">공식 사이트 →</span>
+    </a>
+    <a class="bc" href="https://heritage.go.kr/heri/cul/culSelectDetail.do?ccbaCpno=1121501530000" target="_blank" rel="noopener">
+      <div class="bc-icon">🏰</div>
+      <strong>언양읍성 문화재 정보</strong>
+      <p>연중 무료 개방. 성벽 벽화길·공원 산책 가능.</p>
+      <span class="bc-link">국가유산포털 →</span>
+    </a>
+    <a class="bc" href="https://www.ucf.or.kr/uljuart/index.html" target="_blank" rel="noopener">
+      <div class="bc-icon">🎭</div>
+      <strong>울주문화예술회관</strong>
+      <p>공연·전시 예매 및 강좌 신청. ☎ 052-263-0811</p>
+      <span class="bc-link">예매·신청 →</span>
+    </a>
+    <a class="bc" href="https://www.uljusiseol.or.kr/uljusports/" target="_blank" rel="noopener">
+      <div class="bc-icon">🏊</div>
+      <strong>울주군국민체육센터</strong>
+      <p>수영·헬스·강좌 등록. 지역 주민 할인 적용.</p>
+      <span class="bc-link">강좌 등록 →</span>
+    </a>
+    <a class="bc" href="https://www.onggi.or.kr/" target="_blank" rel="noopener">
+      <div class="bc-icon">🏺</div>
+      <strong>울산옹기축제 &amp; 야화展</strong>
+      <p>4/25~5/10 외고산 옹기마을. 무료 관람.</p>
+      <span class="bc-link">공식 사이트 →</span>
+    </a>
+    <a class="bc" href="https://ticket.ulju.ulsan.kr" target="_blank" rel="noopener">
+      <div class="bc-icon">🎟</div>
+      <strong>울주 공연 티켓 예매</strong>
+      <p>울주군 공연·행사 통합 예매 사이트.</p>
+      <span class="bc-link">티켓 예매 →</span>
+    </a>
+  </div>
+</div>
+
+<!-- ════ FOOTER ════ -->
+<footer class="footer">
+  <div class="footer-top">
+    <div class="footer-brand">언양 <span>문화</span>소식지</div>
+    <div class="footer-links">
+      <a href="https://www.ucf.or.kr:478/" target="_blank" rel="noopener">울주문화재단</a>
+      <a href="https://www.uljusiseol.or.kr" target="_blank" rel="noopener">울주군시설관리공단</a>
+      <a href="https://ulsan.grandculture.net" target="_blank" rel="noopener">울산역사문화대전</a>
+      <a href="https://heritage.go.kr" target="_blank" rel="noopener">국가유산포털</a>
+    </div>
+  </div>
+  <div class="footer-copy">
+    울산광역시 울주군 언양읍 주민·학생·학부모를 위한 주간 문화 뉴스레터 · 매주 월요일 오전 9시 발행 · 무료 배포<br>
+    창간 2026년 4월 27일 · 이미지 출처: Wikimedia Commons(CC 라이선스) / 국가유산포털
+  </div>
+</footer>
+
+</div><!-- /wrap -->
+</div><!-- /page-bg -->
+</body>
+</html>
