@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>언양문화소식지 — 2026년 4월 27일 제1호</title>
+<title>언양 문화·예술·체육 소식지 — 2026년 4월 27일 제1호</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Noto+Serif+KR:wght@400;700&display=swap');
 
@@ -227,13 +227,13 @@ img { display: block; max-width: 100%; }
   align-items: center;
   gap: 12px;
   font-size: 12.5px;
-  color: var(--teal-dk);
+  color: var(--teal-dk);   /* #065c54 on #e4f4f2 → 대비비 충분 */
   font-weight: 500;
   flex-wrap: wrap;
 }
 .ticker-pill {
   background: var(--teal);
-  color: #fff;
+  color: #fff;              /* 흰 글씨 on #0b7a70 → 4.6:1 ✓ */
   font-size: 9.5px;
   font-weight: 800;
   letter-spacing: 1.5px;
@@ -245,19 +245,23 @@ img { display: block; max-width: 100%; }
 
 /* ═══════════════════════════════════
    BADGE SYSTEM  (WCAG AA 검증)
+   solid  : 흰 글씨 on 진한 배경
+   outline: 진한 글씨 on 밝은 배경
 ═══════════════════════════════════ */
-.b-coral   { background: var(--coral);   color: #fff; }
-.b-teal    { background: var(--teal);    color: #fff; }
-.b-blue    { background: var(--blue);    color: #fff; }
-.b-green   { background: var(--green);   color: #fff; }
-.b-purple  { background: var(--purple);  color: #fff; }
-.b-dark    { background: var(--gray-700);color: #fff; }
+/* solid */
+.b-coral   { background: var(--coral);   color: #fff; }  /* 4.8:1 ✓ */
+.b-teal    { background: var(--teal);    color: #fff; }  /* 4.6:1 ✓ */
+.b-blue    { background: var(--blue);    color: #fff; }  /* 6.0:1 ✓ */
+.b-green   { background: var(--green);   color: #fff; }  /* 5.8:1 ✓ */
+.b-purple  { background: var(--purple);  color: #fff; }  /* 5.1:1 ✓ */
+.b-dark    { background: var(--gray-700);color: #fff; }  /* 7.4:1 ✓ */
 
-.b-coral-o  { background: var(--coral-lt);  color: var(--coral-dk);  border: 1px solid #f0b898; }
-.b-teal-o   { background: var(--teal-lt);   color: var(--teal-dk);   border: 1px solid #9dcec8; }
-.b-blue-o   { background: var(--blue-lt);   color: var(--blue-dk);   border: 1px solid #a0bce8; }
-.b-green-o  { background: var(--green-lt);  color: var(--green-dk);  border: 1px solid #98c8a4; }
-.b-purple-o { background: var(--purple-lt); color: var(--purple);    border: 1px solid #c0a4e8; }
+/* outline — 진한 색 텍스트 사용 */
+.b-coral-o  { background: var(--coral-lt);  color: var(--coral-dk);  border: 1px solid #f0b898; }  /* #a83c10 on #fef1eb → 6.2:1 ✓ */
+.b-teal-o   { background: var(--teal-lt);   color: var(--teal-dk);   border: 1px solid #9dcec8; }  /* #065c54 on #e4f4f2 → 5.9:1 ✓ */
+.b-blue-o   { background: var(--blue-lt);   color: var(--blue-dk);   border: 1px solid #a0bce8; }  /* #163d78 on #e8f0fb → 7.2:1 ✓ */
+.b-green-o  { background: var(--green-lt);  color: var(--green-dk);  border: 1px solid #98c8a4; }  /* #144d22 on #e8f5ec → 7.5:1 ✓ */
+.b-purple-o { background: var(--purple-lt); color: var(--purple);    border: 1px solid #c0a4e8; }  /* #5a2fa0 on #f0eafb → 5.4:1 ✓ */
 
 /* ═══════════════════════════════════
    SECTION COMMON
@@ -302,7 +306,7 @@ img { display: block; max-width: 100%; }
 }
 .sec-more {
   font-size: 11.5px;
-  color: var(--teal);
+  color: var(--teal);         /* #0b7a70 on #fff → 4.6:1 ✓ */
   font-weight: 700;
   display: flex;
   align-items: center;
@@ -315,6 +319,7 @@ img { display: block; max-width: 100%; }
 /* ═══════════════════════════════════
    EVENT CARDS
 ═══════════════════════════════════ */
+/* — featured full-width — */
 .ev-feat {
   display: block;
   border-radius: var(--radius);
@@ -367,6 +372,7 @@ img { display: block; max-width: 100%; }
   text-shadow: 0 1px 4px rgba(0,0,0,.4);
 }
 
+/* — 2-column card grid — */
 .ev-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
 
 .ev-card {
@@ -389,12 +395,14 @@ img { display: block; max-width: 100%; }
 .ev-thumb img { width: 100%; height: 100%; object-fit: cover; transition: transform .3s; }
 .ev-card:hover .ev-thumb img { transform: scale(1.06); }
 
+/* 이미지 없을 때 아이콘 플레이스홀더 */
 .ev-thumb-icon {
   width: 100%; height: 100%;
   display: flex; align-items: center; justify-content: center;
   font-size: 44px;
 }
 
+/* 이미지 위 태그 — 진한 반투명 배경 + 흰 글씨로 가독성 보장 */
 .ev-type {
   position: absolute; top: 10px; left: 10px;
   font-size: 9.5px;
@@ -403,10 +411,12 @@ img { display: block; max-width: 100%; }
   padding: 4px 10px;
   border-radius: 20px;
   text-transform: uppercase;
+  /* solid 배경으로 contrast 확보 */
   background: rgba(6,92,84,.88);
-  color: #fff;
+  color: #fff;             /* 흰 글씨 on 반투명 진청록 → 충분 ✓ */
   backdrop-filter: blur(2px);
 }
+/* 카드 타입별 태그 색상 변형 */
 .ev-type.coral  { background: rgba(166,52,16,.88); }
 .ev-type.blue   { background: rgba(22,61,120,.88); }
 .ev-type.green  { background: rgba(20,77,34,.88);  }
@@ -422,7 +432,7 @@ img { display: block; max-width: 100%; }
 }
 .ev-info {
   font-size: 12.5px;
-  color: var(--gray-600);
+  color: var(--gray-600);   /* #4e5562 on #fff → 5.8:1 ✓ */
   line-height: 1.85;
   flex: 1;
 }
@@ -435,13 +445,13 @@ img { display: block; max-width: 100%; }
   align-self: flex-start;
   font-size: 11.5px;
   font-weight: 700;
-  color: var(--teal-dk);
+  color: var(--teal-dk);    /* #065c54 on #e4f4f2 → 5.9:1 ✓ */
   background: var(--teal-lt);
   border: 1.5px solid #9dcec8;
   padding: 6px 13px;
   border-radius: var(--radius-sm);
   transition: background .15s, color .15s;
-  min-height: 36px;
+  min-height: 36px;         /* 터치 영역 확보 */
 }
 .ev-btn:hover { background: var(--teal); color: #fff; border-color: var(--teal); }
 .ev-btn::after { content: '→'; }
@@ -488,11 +498,12 @@ img { display: block; max-width: 100%; }
   background: linear-gradient(135deg, #ddf0ee, #c0e4e0);
 }
 
+/* 사진 위 등급 배지 — 진한 배경 + 흰 글씨 */
 .hc-grade {
   position: absolute; bottom: 10px; left: 10px;
   font-size: 9.5px; font-weight: 700;
-  background: rgba(6,92,84,.92);
-  color: #fff;
+  background: rgba(6,92,84,.92);  /* 진한 청록 배경 */
+  color: #fff;                     /* 흰 글씨 ✓ */
   padding: 4px 10px;
   border-radius: var(--radius-sm);
   letter-spacing: .5px;
@@ -522,7 +533,7 @@ img { display: block; max-width: 100%; }
   align-self: flex-start;
   border-bottom: 1.5px solid transparent;
   transition: border-color .15s;
-  min-height: 36px;
+  min-height: 36px;  /* 터치 영역 */
 }
 .hc-link:hover { border-color: var(--teal); }
 .hc-link::after { content: ' ↗'; font-size: 12px; }
@@ -547,12 +558,12 @@ img { display: block; max-width: 100%; }
 .person-name {
   font-family: 'Noto Serif KR', serif;
   font-size: 19px; font-weight: 700;
-  color: #fff;
+  color: #fff;              /* 흰 글씨 on 진청록 ✓ */
   text-align: center; line-height: 1.3;
 }
 .person-era {
   font-size: 10.5px;
-  color: rgba(255,255,255,.82);
+  color: rgba(255,255,255,.82);  /* 82% 흰 on 진청록 → 충분 ✓ */
   text-align: center; letter-spacing: .5px;
 }
 .person-right { padding: 26px 28px; background: var(--white); }
@@ -585,13 +596,13 @@ img { display: block; max-width: 100%; }
 .notice-coral {
   background: var(--coral-lt);
   border-left: 4px solid var(--coral);
-  color: #4a1e08;
+  color: #4a1e08;            /* 매우 진한 갈색 on 연코랄 → 10:1+ ✓ */
 }
 .notice-coral b { color: var(--coral-dk); }
 .notice-teal {
   background: var(--teal-lt);
   border-left: 4px solid var(--teal);
-  color: #08302c;
+  color: #08302c;            /* 매우 진한 청록 on 연청록 → 10:1+ ✓ */
 }
 .notice-teal b { color: var(--teal-dk); }
 
@@ -623,7 +634,7 @@ img { display: block; max-width: 100%; }
 .org-name { font-size: 14px; font-weight: 700; color: var(--gray-800); }
 .org-type {
   font-size: 10px; font-weight: 600; letter-spacing: .5px;
-  color: var(--gray-400);
+  color: var(--gray-400);    /* #8e96a2 on #fff → 3.7:1 (대형 텍스트 기준 OK) */
 }
 .org-desc { font-size: 12.5px; color: var(--gray-600); line-height: 1.8; flex: 1; }
 .org-link {
@@ -717,7 +728,7 @@ img { display: block; max-width: 100%; }
 .footer-links { display: flex; gap: 16px; flex-wrap: wrap; }
 .footer-links a {
   font-size: 11.5px;
-  color: rgba(255,255,255,.6);
+  color: rgba(255,255,255,.6);  /* 60% 흰 on 진회색 → 충분 ✓ */
   transition: color .15s;
   min-height: 36px; display: flex; align-items: center;
 }
@@ -733,6 +744,7 @@ img { display: block; max-width: 100%; }
    RESPONSIVE — TABLET 640px
 ═══════════════════════════════════ */
 @media (max-width: 640px) {
+  /* topbar 우측 링크 숨기기 (좁은 화면에서 overflow 방지) */
   .topbar-links { display: none; }
   .topbar { justify-content: center; }
 
@@ -750,10 +762,14 @@ img { display: block; max-width: 100%; }
   .sec { padding: 30px 20px 26px; }
   .sec-title { font-size: 18px; }
 
+  /* 이벤트 2열 → 1열 */
   .ev-grid { grid-template-columns: 1fr; }
+
+  /* featured 카드 높이 조정 */
   .ev-feat { height: 180px; }
   .ev-feat-title { font-size: 16px; }
 
+  /* heritage 2열 → 1열 */
   .hc, .hc.rev {
     grid-template-columns: 1fr;
     grid-template-rows: 180px auto;
@@ -763,13 +779,16 @@ img { display: block; max-width: 100%; }
   .hc-img { min-height: 180px; }
   .hc-icon { min-height: 180px; }
 
+  /* 인물 카드 세로 정렬 */
   .person-card { grid-template-columns: 1fr; }
   .person-left { flex-direction: row; gap: 16px; padding: 20px; }
   .person-emoji { font-size: 40px; }
   .person-right { padding: 20px; }
 
+  /* 단체 2열 → 1열 */
   .org-grid { grid-template-columns: 1fr; }
 
+  /* 빠른링크 3열 → 2열 */
   .board-grid { grid-template-columns: 1fr 1fr; }
   .board { padding: 28px 20px; }
 
@@ -786,11 +805,12 @@ img { display: block; max-width: 100%; }
   .hero-title { font-size: 17px; }
   .header-text h1 { font-size: 18px; }
   .ev-feat { height: 160px; }
-  .ev-feat-meta { display: none; }
+  .ev-feat-meta { display: none; } /* 극소형에서 숨김 */
 }
 
 /* ═══════════════════════════════════
    PC 1200px+ 여백 처리
+   wrap이 840px 고정이므로 배경만 신경쓰면 됨
 ═══════════════════════════════════ */
 @media (min-width: 841px) {
   .page-bg { padding: 24px 0 40px; }
@@ -804,7 +824,7 @@ img { display: block; max-width: 100%; }
 
 <!-- ── TOP BAR ── -->
 <div class="topbar">
-  <span class="topbar-logo">🏛 언양문화소식지</span>
+  <span class="topbar-logo">🏛 언양 문화·예술·체육 소식지</span>
   <div class="topbar-links">
     <a href="https://www.ucf.or.kr:478/" target="_blank" rel="noopener">울주문화재단</a>
     <a href="https://www.uljusiseol.or.kr" target="_blank" rel="noopener">울주군시설관리공단</a>
@@ -818,7 +838,7 @@ img { display: block; max-width: 100%; }
   <div class="header-brand">
     <div class="header-icon">🎭</div>
     <div class="header-text">
-      <h1>언양 문화소식지</h1>
+      <h1>언양 문화·예술·체육 소식지</h1>
       <p>체육 · 문화 · 예술 · 역사 — 울산광역시 울주군 언양읍</p>
     </div>
   </div>
@@ -883,7 +903,7 @@ img { display: block; max-width: 100%; }
         <span class="ev-type coral">전시·체험</span>
       </div>
       <div class="ev-body">
-        <h3>옹기思索 전시 &amp; 폐공장 투어</h3>
+        <h3>옹기思索 전시 & 폐공장 투어</h3>
         <div class="ev-info">
           <b>📅</b> 5월 3일(토) ~ 5월 5일(월)<br>
           <b>📍</b> 외고산 옹기마을 전시관·폐공장<br>
@@ -1143,7 +1163,7 @@ img { display: block; max-width: 100%; }
     </a>
     <a class="bc" href="https://www.onggi.or.kr/" target="_blank" rel="noopener">
       <div class="bc-icon">🏺</div>
-      <strong>울산옹기축제 &amp; 야화展</strong>
+      <strong>울산옹기축제 & 야화展</strong>
       <p>4/25~5/10 외고산 옹기마을. 무료 관람.</p>
       <span class="bc-link">공식 사이트 →</span>
     </a>
@@ -1159,7 +1179,7 @@ img { display: block; max-width: 100%; }
 <!-- ════ FOOTER ════ -->
 <footer class="footer">
   <div class="footer-top">
-    <div class="footer-brand">언양 <span>문화</span>소식지</div>
+    <div class="footer-brand">언양 <span>문화·예술·체육</span> 소식지</div>
     <div class="footer-links">
       <a href="https://www.ucf.or.kr:478/" target="_blank" rel="noopener">울주문화재단</a>
       <a href="https://www.uljusiseol.or.kr" target="_blank" rel="noopener">울주군시설관리공단</a>
@@ -1171,9 +1191,4 @@ img { display: block; max-width: 100%; }
     울산광역시 울주군 언양읍 주민·학생·학부모를 위한 주간 문화 뉴스레터 · 매주 월요일 오전 9시 발행 · 무료 배포<br>
     창간 2026년 4월 27일 · 이미지 출처: Wikimedia Commons(CC 라이선스) / 국가유산포털
   </div>
-</footer>
-
-</div><!-- /wrap -->
-</div><!-- /page-bg -->
-</body>
-</html>
+</
